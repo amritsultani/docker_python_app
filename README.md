@@ -12,7 +12,6 @@ You have the option to run a Gatling load test lasting 10 seconds.
 
 ```
 cd docker_python_app
-
 docker-compose up -d
 ```
 Go to http://localhost:5000 to view app
@@ -24,7 +23,13 @@ Go to http://localhost:5000 to view app
 ```
 cd gatling
 chmod +x bin/gatling.sh
-./bin/gatling -s BasicSimulations -nr
+./bin/gatling.sh -nr -s BasicSimulations
+```
+
+## Cleanup
+```
+cd ..
+docker-compose down
 ```
 
 ## Acknowledgements
